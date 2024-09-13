@@ -2,6 +2,8 @@ from scripts.video_generator import concatenate_videos_with_audio
 from scripts.text_generation import generate_text
 from scripts.voice_generator import generate_audio
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 AUDIO_OUTPUT_FOLDER = "generated_audio"

@@ -1,4 +1,4 @@
 moviepy
 requests 
-python-dotenv
 pydub
+python-dotenv

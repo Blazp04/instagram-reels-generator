@@ -3,11 +3,13 @@ import json
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-
 
 def generate_text(theme):
     API_KEY = os.getenv("OPENAI_API_KEY")
+
+    if not API_KEY:
+        raise ValueError(
+            "OPENAI_API_KEY not found in environment variables. Make sure it's set in your .env file.")
 
     # Define the endpoint
     endpoint = "https://api.openai.com/v1/chat/completions"
