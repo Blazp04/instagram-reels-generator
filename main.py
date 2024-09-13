@@ -16,10 +16,13 @@ OUTPUT_FILE = "generated_video/output.mp4"
 PERSON_1_VOICE = "pNInz6obpgDQGcFmaJgB"
 PERSON_2_VOICE = "TX3LPaxmHKxFdv7VOQHJ"
 
+PERSON_1_NAME = "Mark"
+PERSON_2_NAME = "Bob"
+
 
 if __name__ == "__main__":
     STORY_THEME = input("Unesite temu na koju želite napraviti video: ")
-    scenario = generate_text(STORY_THEME)
+    scenario = generate_text(STORY_THEME, PERSON_1_NAME, PERSON_2_NAME)
 
     # Extracting voice from script
     for i in range(len(scenario)):

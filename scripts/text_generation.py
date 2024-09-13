@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 
-def generate_text(theme):
+def generate_text(theme, PERSON_1_NAME, PERSON_2_NAME):
     API_KEY = os.getenv("OPENAI_API_KEY")
 
     if not API_KEY:
@@ -29,7 +29,7 @@ def generate_text(theme):
         "messages": [
             {
                 "role": "system",
-                "content": "Your name is StorytellerGPT. Your task is to create engaging narratives that explore different perspectives in conversations. In this story, two characters, Alice and Bob, engage in a lively debate about the teme that is provided. Make it big drama and lots of emotions"
+                "content": f"Your name is StorytellerGPT. Your task is to create engaging narratives that explore different perspectives in conversations. In this story, two characters, {PERSON_1_NAME} and {PERSON_2_NAME}, engage in a lively debate about the theme that is provided. Make it big drama and lots of emotions. Dont keep conversation too long. Count about of 30-60 sec conversation"
             },
             {
                 "role": "user",
