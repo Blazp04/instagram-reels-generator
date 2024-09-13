@@ -7,7 +7,7 @@ def generate_audio(text, voice_id, output_folder, file_name):
     if not API_KEY:
         raise ValueError(
             "ELEVENLABS_API_KEY not found in environment variables. Make sure it's set in your .env file.")
-
+    else:
         # Define the
         url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
 

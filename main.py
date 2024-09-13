@@ -7,12 +7,13 @@ load_dotenv()
 
 
 AUDIO_OUTPUT_FOLDER = "generated_audio"
+VIDEO_OUTPUT_FOLDER = "generated_video"
 
 INPUT_VIDEO_FOLDER = "videos"
 INPUT_AUDIO_FOLDER = "generated_audio"
 OUTPUT_FILE = "generated_video/output.mp4"
 
-PERSON_1_VOICE = "EXAVITQu4vr4xnSDxMaL"
+PERSON_1_VOICE = "pNInz6obpgDQGcFmaJgB"
 PERSON_2_VOICE = "TX3LPaxmHKxFdv7VOQHJ"
 
 
@@ -34,6 +35,7 @@ if __name__ == "__main__":
         os.makedirs(AUDIO_OUTPUT_FOLDER, exist_ok=True)
         generate_audio(text, voice, AUDIO_OUTPUT_FOLDER, str(i) + ".mp3")
 
+    os.makedirs(VIDEO_OUTPUT_FOLDER, exist_ok=True)
     # generating video
     concatenate_videos_with_audio(
         INPUT_VIDEO_FOLDER, INPUT_AUDIO_FOLDER, OUTPUT_FILE)
