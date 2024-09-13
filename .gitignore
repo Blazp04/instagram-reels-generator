@@ -163,3 +163,4 @@ cython_debug/
 #.idea/
 generated_audio/
 generated_video/
+videos/
